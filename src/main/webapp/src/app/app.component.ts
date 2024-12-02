@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { WelcomeControllerService, WelcomeMessage } from './api';
-import {Observable} from 'rxjs';
 
+
+// @ts-ignore
 @Component({
   selector: 'app-root',
   standalone: false,
