@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Welcome Controller",
+      "description": "REST API for getting random welcome messages"
+    }
+  ],
+  "paths": {
+    "/welcome": {
+      "get": {
+        "tags": [
+          "Welcome Controller"
+        ],
+        "summary": "Get a random welcome message",
+        "description": "Returns a random welcome message from the predefined list of greetings",
+        "operationId": "getRandomWelcome",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WelcomeMessage"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "WelcomeMessage": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
