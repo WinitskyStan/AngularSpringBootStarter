@@ -38,3 +38,6 @@ The project uses OpenAPI Generator Maven plugin to:
 3. Build the Angular frontend with the generated client
 
 
+## Demo
+
+![Demo of running application](demo.gif)
